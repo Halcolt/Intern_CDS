@@ -20,23 +20,42 @@
       integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 80%;
+        margin: auto;
+        height: 40px;
+        font-size: 1vw;
+      }
+      .header-text {
+        font-size: 2vw;
+        color: red;
+      }
+      .search-input {
+        width: 50%;
+      }
+      .search-button {
+        width: 50%;
+      }
+      @media (max-width: 768px) {
+        .header-text {
+          font-size: 3vw;
+        }
+        .search-input {
+          width: 70%;
+        }
+        .search-button {
+          width: 30%;
+        }
+      }
+    </style>
   </head>
-
-  <style>
-    .nav-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      margin: 0 auto;
-      height: 40px;
-      font-size: 10px;
-    }
-  </style>
-
   <body>
     <header class="container-fluid bg-light">
-      <div class="row align-items-center" style="height: 80px">
+      <div class="row align-items-center">
         <div class="col-3 text-right">
           <img
             src="BK-Logo.png"
@@ -46,8 +65,12 @@
           />
         </div>
         <div class="col-5 text-left">
-          <p class="h3 mb-0">ĐẠI HỌC BÁCH KHOA HÀ NỘI</p>
-          <p class="h4 mb-0">TRƯỜNG ĐIỆN - ĐIỆN TỬ</p>
+          <p class="header-text h3" style="font-weight: bold">
+            ĐẠI HỌC BÁCH KHOA HÀ NỘI
+          </p>
+          <p class="header-text h4" style="font-size: 80%">
+            TRƯỜNG ĐIỆN - ĐIỆN TỬ
+          </p>
         </div>
         <div class="col-3 text-left">
           <div class="row-1">
@@ -63,14 +86,15 @@
               style="height: 15px; width: 25px"
             />
           </div>
-          <div class="row-1">
+          <div class="row">
             <input
               type="text"
-              class="form-control d-inline-block"
+              class="form-control d-inline-block search-input"
               placeholder="Search ..."
-              style="width: 70%"
             />
-            <button class="btn btn-outline-secondary d-inline-block">
+            <button
+              class="btn btn-outline-secondary d-inline-block search-button"
+            >
               <i class="fa fa-search">Tìm kiếm</i>
             </button>
           </div>

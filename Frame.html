@@ -36,19 +36,15 @@
       }
 
       .nav-item {
-        display: flex;
+        display: inline-block;
         justify-content: center;
         align-items: start;
         padding: 5%;
-        margin: 0;
+        border: 1px solid white; /* Added white border */
       }
 
       .header-text {
-        font-size: 1.7vw;
         color: red;
-      }
-      .search-input {
-        width: 100%;
       }
 
       .search-icon {
@@ -60,12 +56,7 @@
       }
 
       .header-img {
-        height: 56px; /* Reduced height */
-      }
-      @media (max-width: 1080px) {
-        .header-text {
-          font-size: 3vw;
-        }
+        height: 56px;
       }
 
       .search-container {
@@ -74,8 +65,30 @@
         width: 100%;
       }
 
-      .form-control {
-        padding-right: 2.5rem;
+      .dropdown-content {
+        display: none;
+        text-align: start;
+        position: absolute;
+        background-color: #343a40;
+        min-width: 4vw;
+        transform: translateX(-8%);
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 6px 8px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .nav-item:hover .dropdown-content {
+        display: block;
+      }
+
+      @media (max-width: 1080px) {
+        .header-text {
+          font-size: 3vw;
+        }
       }
     </style>
   </head>
@@ -93,7 +106,7 @@
             TRƯỜNG ĐIỆN - ĐIỆN TỬ
           </p>
         </div>
-        <div class="col-3 text-left">
+        <div class="col-2 text-left">
           <div class="row-1">
             <span>Ngôn ngữ:</span>
             <img
@@ -107,7 +120,7 @@
               style="height: 15px; width: 25px"
             />
           </div>
-          <div class="row-1 search-container">
+          <div class="search-container">
             <input
               type="text"
               class="form-control search-input"
@@ -125,71 +138,111 @@
         <div class="nav-menu row">
           <div class="col-1 text-center">
             <div class="nav-item">
-              <a href="#" class="text-white">
-                <a href="#" class="text-white"
-                  >Tin tức & <br />
-                  Sự kiện</a
-                >
-              </a>
+              <a href="#" class="text-white">Tin tức & <br />Sự kiện</a>
+              <div class="dropdown-content">
+                <a href="#">Tin tức</a>
+                <a href="#">Sự kiện</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Nhân lực</a>
+              <div class="dropdown-content">
+                <a href="#">Cán bộ</a>
+                <a href="#">Sinh viên thạc sĩ </a>
+                <a href="#">Sinh viên tiến sĩ</a>
+                <a href="#">Học giả thỉnh giảng</a>
+                <a href="#">CTV NC</a>
+                <a href="#">NCV sau TS</a>
+                <a href="#">Cựu SV</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Nghiên cứu</a>
+              <div class="dropdown-content">
+                <a href="#">Research 1</a>
+                <a href="#">Research 2</a>
+                <a href="#">Research 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item text-center">
-              <a href="#" class="text-white">
-                <a href="#" class="text-white"
-                  >Công bố <br />
-                  khoa học</a
-                >
-              </a>
+              <a href="#" class="text-white">Công bố <br />khoa học</a>
+              <div class="dropdown-content">
+                <a href="#">Publication 1</a>
+                <a href="#">Publication 2</a>
+                <a href="#">Publication 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Giải thưởng</a>
+              <div class="dropdown-content">
+                <a href="#">Award 1</a>
+                <a href="#">Award 2</a>
+                <a href="#">Award 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Blogs</a>
+              <div class="dropdown-content">
+                <a href="#">Blog 1</a>
+                <a href="#">Blog 2</a>
+                <a href="#">Blog 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item text-center">
-              <a href="#" class="text-white">
-                <a href="#" class="text-white"
-                  >Thiết bị & <br />
-                  Dụng cụ</a
-                >
-              </a>
+              <a href="#" class="text-white">Thiết bị & <br />Dụng cụ</a>
+              <div class="dropdown-content">
+                <a href="#">Equipment 1</a>
+                <a href="#">Equipment 2</a>
+                <a href="#">Equipment 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Hợp tác</a>
+              <div class="dropdown-content">
+                <a href="#">Cooperation 1</a>
+                <a href="#">Cooperation 2</a>
+                <a href="#">Cooperation 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Liên hệ</a>
+              <div class="dropdown-content">
+                <a href="#">Contact 1</a>
+                <a href="#">Contact 2</a>
+                <a href="#">Contact 3</a>
+              </div>
             </div>
           </div>
           <div class="col-1 text-center">
             <div class="nav-item">
               <a href="#" class="text-white">Tuyển dụng</a>
+              <div class="dropdown-content">
+                <a href="#">Recruitment 1</a>
+                <a href="#">Recruitment 2</a>
+                <a href="#">Recruitment 3</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
   </body>
+</html>
+
 </html>
